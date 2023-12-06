@@ -64,8 +64,7 @@ int main() {
             numTwoFloat = std::stof(userNumTwo);
 
             // check if sign is valid
-            if (userSign == '+' || '-' || '/' || '%' || '*') {
-
+            if (userSign == '+' || userSign == '-' || userSign == '/' || userSign == '%' || userSign == '*') {
                 // check if user inputs mod sign
                 if (userSign == '%') {
 
@@ -94,10 +93,9 @@ int main() {
                     std::cout << "" << numOneFloat << " " << userSign << " " << numTwoFloat << " = " << std::fixed << std::setprecision(2) << calcAnswer << std::endl;
                 }
             } else {
-
                 // tell user if invalid sign input
-                std::cout << "" << userSign << " is an invalid sign." << std::endl;
-                }
+                std::cout << "Please input a valid sign." << std::endl;
+            }
 
         // catch invalid inputs
         } catch (std::invalid_argument) {
